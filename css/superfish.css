@@ -1,0 +1,219 @@
+/*** MENU ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu {
+	line-height: 1.0;
+}
+.menuHolder{
+	position: relative;
+	display: inline-block;
+	width: 85%; float:right;
+	margin-top: 0;
+	z-index: 50;
+}
+.sf-menu>li {
+	position: relative;
+	display: inline-block;
+	width: 16.6%;
+	height: 30px;
+	float: left;
+	text-align: center;
+}
+.sub-menu li{
+	float: none;
+}
+.sf-menu>li:first-child{
+	/*width: 55px;*/
+}
+.sf-menu>li:first-child a{
+/*	font-size: 0px!important;
+	line-height: 0px!important;*/
+}
+.sf-menu>li:after {
+	position: absolute;
+	display: block;
+	width: 2px;
+	height: 40px;
+	background: url('../images/separator.jpg') no-repeat 0 0;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+	content: "";
+}
+.sf-menu>li.last:after{	
+	display:none;
+}
+.sf-menu a {
+	font: 500 17px/18px 'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif;
+	display:inline-block;
+	color:#fff;
+	letter-spacing:0px;
+	
+	text-decoration: none;
+	position: relative;
+	margin: 0;
+	padding: 10px 0;
+	width: 100%; height:20px;
+	/*background: #db5e2b;*/
+}
+.sf-menu a:hover,
+.sf-menu li.current>a,
+.sf-menu li.sfHover>a {
+	color:#333;
+	background: #fff;
+	text-decoration:none;
+}
+.sf-menu li.active {color:#fff; background:#8cb807; text-decoration:none; padding: 0px 0 10px 0; height:30px;}
+.sf-menu ul {
+	position: absolute;
+	top: -999em;
+	padding: 38px 0 27px;
+	background: #d75427 url('../images/bg_sub1.jpg') 0 0 repeat-x;
+	-webkit-box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    1px 2px 0 rgba(0, 0, 0, 0.5);
+	box-shadow:         1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.sf-menu ul ul {
+	position: absolute;
+	top: -999em;
+	padding: 32px 0 21px;
+	background: #f1a827 url('../images/bg_sub2.jpg') 0 0 repeat-x;
+	-webkit-box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.8);
+	-moz-box-shadow:    1px 2px 0 rgba(0, 0, 0, 0.8);
+	box-shadow:         1px 2px 0 rgba(0, 0, 0, 0.8);
+}
+.sf-menu ul ul:after {
+	position: absolute;
+	display: block;
+	width: 5px;
+	height: 9px;
+	background: url('../images/arr_1.png') no-repeat 0 0;
+	top: 13px;
+	left: -5px;
+	pointer-events: none;
+	content: "";
+}
+.sf-menu ul li {
+	width: 177px;
+	height: 28px;
+	margin: 0;
+	text-align: center;
+}
+.sub-menu ul li {
+	width: 154px;
+}
+.sf-menu ul li a{
+	margin: 0;
+	font: 500 14px/15px 'Roboto', sans-serif;
+	color: #fff;
+	padding: 0;
+	background: transparent;
+}
+.sf-menu li:hover {
+	visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+/* submenu_1 position */
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left: -1px;
+    top: 57px; /* match top ul list item height */
+	z-index: 99;
+}
+/* submenu_2 */
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top: -999em;
+}
+/* submenu_2 position */
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left: 189px;
+	top: 56px;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top: -999em;
+}
+.sf-menu li li a:hover,
+.sf-menu li.sfHover li.sfHover > a {
+	color: #3e4354 !important;/* submenu_1 hover */
+	background: transparent;
+}
+.sf-menu li li li a:hover,
+.sf-menu li li.sfHover li li.sfHover > a {
+	color: #d1441f !important;/* submenu_2 hover */
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left: 10em; /* match ul width */
+	top: 0;
+}
+.sf-menu > li > a .menu-arrow {
+	display: block;
+	width: 5px;
+	height: 3px;
+	position: absolute;
+	left: 49%;
+	top: 42px;
+	text-indent: -100%;
+	font-size: 0;
+	line-height: 0;
+	background: url('../images/menu_arrow.png') 0 -7px no-repeat;
+	vertical-align: middle;
+	z-index: 800;
+}
+.sf-menu ul > li > a .menu-arrow {
+	display: block;
+	width: 5px;
+	height: 3px;
+	position: absolute;
+	left: 90%;
+	top: 6px;
+	text-indent: -100%;
+	font-size: 0;
+	line-height: 0;
+	background: url('../images/menu_arrow.png') 0 -7px no-repeat;
+	vertical-align: middle;
+	z-index: 800;
+}
+/* end submenu_2 */
+
+.sf-menu a{
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/* Design for a width of 768px */
+@media only screen and (max-width: 995px) {
+
+	
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+nav {background: none; width: 100%;}
+nav select {
+    display: block !important;
+    height: 21px;
+    line-height: 21px;
+	border:1px solid #000;
+    outline: medium none;
+    padding: 0;
+    width: 100%;
+}
+nav span,
+.sf-menu{display:none}
+
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+nav span,
+.sf-menu{display:none}
+ 
+}

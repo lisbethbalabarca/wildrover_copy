@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.wildroverhostels.com/form.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Apr 2017 22:47:41 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PagosNet</title>
+<script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Homenaje);
+body{ font-family: 'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif; color:#444; font-size:14px; text-transform:uppercase;}
+.campo { display: inline-block;  margin: 3px; width:220px;  padding: 8px 16px; background: #eee; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; transition: all 0.3s ease-out; box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0,0,0,0.3), 0 0 4px 1px rgba(0,0,0,0.2); font-size:14px; color:#333333; text-transform:uppercase; font-family:'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif;}
+textarea{font-family:'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif; color:#444; font-size:11px; text-transform:uppercase;}
+.submit {display: inline-block;  margin: 5px; width:160px;  padding: 8px 15px; background:#8cb807; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; transition: all 0.3s ease-out; box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0,0,0,0.3), 0 0 4px 1px rgba(0,0,0,0.2);
+  /* Font styles */
+font-family:'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif; text-decoration: none; text-shadow: 0 1px rgba(255,255,255,0.7); font-size:16px; color:#FFF; text-shadow:0 1px 0 #000;}
+.submit:hover {background-color: #5a4099; color:#fff; text-shadow:0 1px 0 #000;}
+.Estilo13 {color: #FF6600; font-weight: bold;}
+label,a{font-family:'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif; font-size : 14px;}
+.err {font-family:'Homenaje', Arial, "Helvetica Neue", Helvetica, sans-serif; font-size : 13x; color: red;}
+
+</style>
+</head>
+
+<body>
+<div id='contact_form_errorloc' class='err'></div>
+<form method="POST" name="contact_form" action="http://www.wildroverhostels.com/form.php"> 
+<input type="text" class="campo" size="38" name="name" value="Name: " onFocus="if(this.value=='Name: '){this.value=''}" onBlur="if(this.value==''){this.value='Name: '}"><br>
+<input type="text" class="campo" size="38" name="email" value="E-Mail: " onFocus="if(this.value=='E-Mail: '){this.value=''}" onBlur="if(this.value==''){this.value='E-Mail: '}"><br>
+<select name="city" id="city" class="campo">            
+  <option value"" selected="selected">Select City</option>
+  <option value="Cusco">Cusco</option>
+  <option value="Arequipa">Arequipa</option>
+  <option value="La Paz">La Paz</option>  
+</select><BR>
+
+<textarea name="message" class="campo" rows=2 cols=30>Message:</textarea><br>
+<img src="captcha_code_fileeb64.jpg?rand=173687037" id='captchaimg' ><br>
+<label for='message' class="Estilo2">Enter the code:</label><br>
+<input id="6_letters_code" class="campo" name="6_letters_code" type="text"><br>
+If you can not read the image, click <a href='javascript: refreshCaptcha();' style="color:#3f4f6f; font-size:14px;">here</a> to refresh<br><br>
+<input type="submit" class="submit" value=" SEND " name='submit'>
+</form>
+<script language="JavaScript">
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+var frmvalidator  = new Validator("contact_form");
+//remove the following two lines if you like error message box popups
+frmvalidator.EnableOnPageErrorDisplaySingleBox();
+frmvalidator.EnableMsgsTogether();
+
+frmvalidator.addValidation("name","req","Please enter your full name"); 
+frmvalidator.addValidation("email","req","Please enter your email address"); 
+frmvalidator.addValidation("email","email","Please enter a valid email"); 
+</script>
+<script language='JavaScript' type='text/javascript'>
+function refreshCaptcha()
+{
+	var img = document.images['captchaimg'];
+	img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
+}
+</script>
+</body>
+
+<!-- Mirrored from www.wildroverhostels.com/form.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Apr 2017 22:47:42 GMT -->
+</html>

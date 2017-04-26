@@ -1,0 +1,87 @@
+.carousel_1 li {
+    float: left;
+}
+
+.carousel-div1 { height:1185px;
+	position: relative;
+	z-index:9;	
+	margin-top: 0px; overflow-y:scroll;
+}
+
+.carousel_1 {
+	cursor: auto !important;	
+	overflow:hidden;
+	height:1400px;
+}
+.carousel_1 .block_2{
+	position: relative;
+	padding-bottom: 26px;
+	margin-bottom: 26px;
+	border-bottom: 1px solid #f5f6f6; 
+}
+.carousel_1 .block_3{
+	position: relative;
+	padding-bottom: 26px;
+}
+.carousel_1 img{
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin: 5px 20px 0 0;
+}
+.carousel_1 h4{
+	margin-bottom: 10px;
+}
+.carousel_1 p{
+	line-height: 22px;
+}
+.caroufredsel_wrapper {
+	z-index:9;
+	
+	padding-bottom: 0;
+	display: inline-block;
+}
+
+
+.prev1 {
+	position: relative;
+	background: url('../images/prev1.jpg') left 0 no-repeat;
+	display: inline-block;
+	float: left;
+	width: 45px;
+	height: 45px;
+	z-index:99;
+}
+
+
+.next1 {
+	position: relative;
+	background: url('../images/next1.jpg') right 0 no-repeat;
+	display: inline-block;
+	margin-left: 3px;
+	width: 45px;
+	height: 45px;
+	z-index:99;
+}
+
+
+
+.next1:hover{
+	background-position: 0 0;
+}
+.prev1:hover {
+	background-position: right 0;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.carousel_1-div {
+		margin: 0 !important;	
+	}
+}
+
+ @media only screen and (max-width: 479px) { 
+
+	
+
+	}
